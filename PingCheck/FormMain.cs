@@ -19,6 +19,8 @@ namespace PingCheck
             InitializeComponent();
             //RegionBox.SelectedIndex = 0;
             RegionBox.SelectedItem = Properties.Settings.Default.StandardRegion;
+            setGoogleTest(Properties.Settings.Default.Generaltest);
+            setColor(Properties.Settings.Default.ColorInd);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,7 +88,10 @@ namespace PingCheck
                 case "EUNE": return "104.160.142.3";
                 case "OCE": return "104.160.156.1";
                 case "LAN": return "104.160.136.3";
-                case "JPN": return "104.160.154.199";
+                case "LAS": return "104.160.153.35";
+                case "TUR": return "162.249.79.82";
+                case "BR": return "8.23.25.28";
+                case "RUS": return "162.249.72.35";
                 default: return "";
             }
         }
@@ -124,8 +129,22 @@ namespace PingCheck
             var settings = new FormSettings();
 
             settings.CheckBoxChangedEvent += Settings_CheckBoxChangedEvent;
+            settings.CheckBoxChangedEventColor += Settings_CheckBoxChangedEventColor;
             
             settings.Show();
+        }
+
+        private void Settings_CheckBoxChangedEventColor(object sender, EventArgs e)
+        {
+            var cb = (CheckBox)sender;
+            if (cb.Checked)
+            {
+                panel1.Visible = true;
+            }
+            else
+            {
+                panel1.Visible = false;
+            }
         }
 
         private void Settings_CheckBoxChangedEvent(object sender, EventArgs e)
@@ -133,14 +152,24 @@ namespace PingCheck
             var cb = (CheckBox)sender;
             if (cb.Checked)
             {
-                GoogleTest.Enabled = true;
-                InternetTest.Visible = true;
+                setGoogleTest(true);
             }
             else
             {
-                GoogleTest.Enabled = false;
-                InternetTest.Visible = false;
+                setGoogleTest(false);
             }
+        }
+
+        void setGoogleTest(bool aktiv)
+        {
+            GoogleTest.Enabled = aktiv;
+            InternetTest.Visible = aktiv;
+
+        }
+
+        void setColor(bool aktiv)
+        {
+            panel1.Visible = aktiv;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -152,6 +181,33 @@ namespace PingCheck
         {
             var help = new FormHelp();
             help.Show();
+        }
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+            var about = new FormAbout();
+            about.Show();
+        }
+
+        private void InfobtnMain_Click(object sender, EventArgs e)
+        {
+            var info = new FormInformation();
+            info.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearbutton_Click(object sender, EventArgs e)
+        {
+            ausgabe.Text = "";
         }
     }
 }

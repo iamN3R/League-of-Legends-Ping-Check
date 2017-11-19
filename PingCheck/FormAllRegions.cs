@@ -28,11 +28,14 @@ namespace PingCheck
         private void LoLPingCheckShowAll_Load(object sender, EventArgs e)
         {
             bgwOCE.RunWorkerAsync();
-            bgwJPN.RunWorkerAsync();
             bgwEUW.RunWorkerAsync();
             bgwEUNE.RunWorkerAsync();
             bgwNA.RunWorkerAsync();
             bgwLAN.RunWorkerAsync();
+            bgwLAS.RunWorkerAsync();
+            bgwBR.RunWorkerAsync();
+            bgwRUS.RunWorkerAsync();
+            bgwTUR.RunWorkerAsync();
         }
 
         private void spezialTick(string regionName, CheckBox cb, Label label)
@@ -155,15 +158,15 @@ namespace PingCheck
             allgemeinerProgressChanged(e, allOCElabel, allOCEfarbe);
         }
 
-        private void bgwJPN_DoWork(object sender, DoWorkEventArgs e)
-        {
-            allgemeinerDowork(allJPN, "JPN", allJPNlabel, bgwJPN);
-        }
+     // private void bgwJPN_DoWork(object sender, DoWorkEventArgs e)
+     // {
+     //     allgemeinerDowork(allJPN, "JPN", allJPNlabel, bgwJPN);
+     // }
 
-        private void bgwJPN_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            allgemeinerProgressChanged(e, allJPNlabel, allJPNfarbe);
-        }
+      // private void bgwJPN_ProgressChanged(object sender, ProgressChangedEventArgs e)
+      // {
+      //     allgemeinerProgressChanged(e, allJPNlabel, allJPNfarbe);
+      // }
 
         private void bgwEUW_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -203,6 +206,67 @@ namespace PingCheck
         private void bgwLAN_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             allgemeinerProgressChanged(e, allLANlabel, allLANfarbe);
+        }
+
+        private void bgwLAS_DoWork(object sender, DoWorkEventArgs e)
+        {
+            allgemeinerDowork(allLAS, "LAS", allLASlabel, bgwLAS);
+        }
+
+        private void BgwLAN_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            allgemeinerProgressChanged(e, allLASlabel, allLASfarbe);
+        }
+
+        private void bgwBR_DoWork(object sender, DoWorkEventArgs e)
+        {
+            allgemeinerDowork(allBR, "BR", allBRlabel, bgwBR);
+        }
+
+        private void BgwBR_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            allgemeinerProgressChanged(e, allBRlabel, allBRfarbe);
+        }
+
+        private void bgwRUS_DoWork(object sender, DoWorkEventArgs e)
+        {
+            allgemeinerDowork(allRUS, "RUS", allRUSlabel, bgwRUS);
+        }
+
+        private void BgwRUS_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            allgemeinerProgressChanged(e, allRUSlabel, allRUSfarbe);
+        }
+
+        private void bgwTUR_DoWork(object sender, DoWorkEventArgs e)
+        {
+            allgemeinerDowork(allTUR, "TUR", allTURlabel, bgwTUR);
+        }
+
+        private void BgwTUR_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            allgemeinerProgressChanged(e, allTURlabel, allTURfarbe);
+        }
+
+        private void InfoBtnAllRegions_Click(object sender, EventArgs e)
+        {
+            var info = new FormInformation();
+            info.Show();
+        }
+
+        private void allEUW_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void allLAS_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bgwLAS_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            allgemeinerProgressChanged(e, allLASlabel, allLASfarbe);
         }
     }
 }

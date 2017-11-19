@@ -34,25 +34,26 @@
             this.cbGeneraltest = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.StandardRegion = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.winStatlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbWinStart
             // 
             this.cbWinStart.AutoSize = true;
-            this.cbWinStart.Location = new System.Drawing.Point(12, 31);
+            this.cbWinStart.Location = new System.Drawing.Point(15, 23);
             this.cbWinStart.Name = "cbWinStart";
             this.cbWinStart.Size = new System.Drawing.Size(115, 17);
             this.cbWinStart.TabIndex = 0;
             this.cbWinStart.Text = "start with Windows";
             this.cbWinStart.UseVisualStyleBackColor = true;
+            this.cbWinStart.CheckedChanged += new System.EventHandler(this.cbWinStart_CheckedChanged);
             // 
             // cbColorshow
             // 
             this.cbColorshow.AutoSize = true;
-            this.cbColorshow.Location = new System.Drawing.Point(12, 73);
+            this.cbColorshow.Checked = true;
+            this.cbColorshow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbColorshow.Location = new System.Drawing.Point(15, 65);
             this.cbColorshow.Name = "cbColorshow";
             this.cbColorshow.Size = new System.Drawing.Size(132, 17);
             this.cbColorshow.TabIndex = 1;
@@ -65,7 +66,7 @@
             this.cbGeneraltest.AutoSize = true;
             this.cbGeneraltest.Checked = true;
             this.cbGeneraltest.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbGeneraltest.Location = new System.Drawing.Point(12, 115);
+            this.cbGeneraltest.Location = new System.Drawing.Point(15, 107);
             this.cbGeneraltest.Name = "cbGeneraltest";
             this.cbGeneraltest.Size = new System.Drawing.Size(112, 17);
             this.cbGeneraltest.TabIndex = 2;
@@ -75,6 +76,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "EUW",
@@ -82,14 +84,12 @@
             "NA",
             "OCE",
             "LAN",
-            "JPN",
             "NOT AVAILABLE YET",
             "LAS",
-            "KR",
             "BR",
             "RUS",
             "TUR"});
-            this.comboBox1.Location = new System.Drawing.Point(102, 154);
+            this.comboBox1.Location = new System.Drawing.Point(115, 146);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(132, 21);
             this.comboBox1.TabIndex = 3;
@@ -98,55 +98,38 @@
             // StandardRegion
             // 
             this.StandardRegion.AutoSize = true;
-            this.StandardRegion.Location = new System.Drawing.Point(9, 157);
+            this.StandardRegion.Location = new System.Drawing.Point(12, 149);
             this.StandardRegion.Name = "StandardRegion";
             this.StandardRegion.Size = new System.Drawing.Size(87, 13);
             this.StandardRegion.TabIndex = 4;
             this.StandardRegion.Text = "Standard Region";
             // 
-            // label1
+            // winStatlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(165, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "NOT AVAILABLE YET";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(165, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "NOT AVAILABLE YET";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(165, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "NOT AVAILABLE YET";
+            this.winStatlabel.AutoSize = true;
+            this.winStatlabel.Location = new System.Drawing.Point(212, 24);
+            this.winStatlabel.Name = "winStatlabel";
+            this.winStatlabel.Size = new System.Drawing.Size(37, 13);
+            this.winStatlabel.TabIndex = 5;
+            this.winStatlabel.Text = "          ";
             // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 347);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(272, 199);
+            this.Controls.Add(this.winStatlabel);
             this.Controls.Add(this.StandardRegion);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cbGeneraltest);
             this.Controls.Add(this.cbColorshow);
             this.Controls.Add(this.cbWinStart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(288, 238);
+            this.MinimumSize = new System.Drawing.Size(288, 238);
             this.Name = "FormSettings";
             this.Text = "LoL Ping Check - Settings";
+            this.Load += new System.EventHandler(this.FormSettings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,8 +142,6 @@
         private System.Windows.Forms.CheckBox cbGeneraltest;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label StandardRegion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label winStatlabel;
     }
 }

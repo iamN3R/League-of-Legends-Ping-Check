@@ -5,5 +5,14 @@
     <Setting Name="StandardRegion" Type="System.String" Scope="User">
       <Value Profile="(Default)">EUW</Value>
     </Setting>
+    <Setting Name="Generaltest" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ColorInd" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Winstatlabel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">on</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

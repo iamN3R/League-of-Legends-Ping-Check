@@ -22,5 +22,29 @@ namespace PingCheck
             string targetURL = "http://www.noel.familie-seifert.com/contact/";
             System.Diagnostics.Process.Start(targetURL);
         }
+
+        private void smYoutube_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string smYt = "http://www.youtube.com/nerlp/";
+            System.Diagnostics.Process.Start(smYt);
+        }
+
+        private void smReddit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string smRed = "https://www.reddit.com/user/iamn3r/";
+            System.Diagnostics.Process.Start(smRed);
+        }
+
+        private void smInstagram_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string smInsta = "https://www.instagram.com/justxn3r/";
+            System.Diagnostics.Process.Start(smInsta);
+        }
+
+        private void smWebside_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string smWeb = "http://www.noel.familie-seifert.com/";
+            System.Diagnostics.Process.Start(smWeb);
+        }
     }
 }

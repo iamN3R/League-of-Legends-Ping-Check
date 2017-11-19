@@ -34,5 +34,41 @@ namespace PingCheck.Properties {
                 this["StandardRegion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Generaltest {
+            get {
+                return ((bool)(this["Generaltest"]));
+            }
+            set {
+                this["Generaltest"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ColorInd {
+            get {
+                return ((bool)(this["ColorInd"]));
+            }
+            set {
+                this["ColorInd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("on")]
+        public string Winstatlabel {
+            get {
+                return ((string)(this["Winstatlabel"]));
+            }
+            set {
+                this["Winstatlabel"] = value;
+            }
+        }
     }
 }
