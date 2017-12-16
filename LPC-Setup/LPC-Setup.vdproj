@@ -28,13 +28,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_87DC33506D88BC605B7A6D420BE8AFF2"
+        "OwnerKey" = "8:_843C070BDB4F4972892ED94242B3F2C7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_843C070BDB4F4972892ED94242B3F2C7"
+        "OwnerKey" = "8:_87DC33506D88BC605B7A6D420BE8AFF2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -55,6 +55,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -71,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -187,15 +203,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:LoL Ping Check - Setup"
-        "ProductCode" = "8:{EA765D94-5BD3-417A-8F00-9AC9B0B2F261}"
-        "PackageCode" = "8:{DB2CF2E1-2FAE-4FEC-A9BC-BFC3598D28DB}"
+        "ProductCode" = "8:{01A76FD8-8B3B-40D7-ABA4-25812F1367AA}"
+        "PackageCode" = "8:{B4FF7917-C9E7-4BA7-879C-D8419874BF55}"
         "UpgradeCode" = "8:{49B0D832-0F1C-4996-A0A6-0253AFDD4D91}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:N3R - Noel Seifert"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -751,7 +767,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_843C070BDB4F4972892ED94242B3F2C7"
             {
-            "SourcePath" = "8:..\\PingCheck\\obj\\Debug\\PingCheck.exe"
+            "SourcePath" = "8:..\\PingCheck\\obj\\Release\\PingCheck.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_AC2AE2E86365462199C353DD4A5229E9"

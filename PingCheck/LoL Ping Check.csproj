@@ -128,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +148,7 @@
     <Content Include="LoLPing.ico" />
     <Content Include="LoLPingGroß%281%29.ico" />
     <Content Include="LoLPingGroß.ico" />
+    <None Include="Resources\template_lcu_changelog_1280x720_1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

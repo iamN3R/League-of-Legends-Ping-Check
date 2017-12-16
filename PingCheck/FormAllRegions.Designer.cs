@@ -325,7 +325,6 @@
             this.InfoBtnAllRegions.TabIndex = 27;
             this.InfoBtnAllRegions.Text = "Region Information";
             this.InfoBtnAllRegions.UseVisualStyleBackColor = true;
-            this.InfoBtnAllRegions.Click += new System.EventHandler(this.InfoBtnAllRegions_Click);
             // 
             // bgwLAS
             // 

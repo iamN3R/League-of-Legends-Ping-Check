@@ -100,7 +100,7 @@ namespace PingCheck
         {
             new Ping();
             var PingTest = new Ping();
-            var GooglePing = PingTest.Send("www.google.com", 1000);
+            var GooglePing = PingTest.Send("8.8.8.8", 1000);
             if (GooglePing.Status == IPStatus.Success)
             {
                 InternetTest.Text = "available " + GooglePing.RoundtripTime + " ms";
@@ -209,5 +209,8 @@ namespace PingCheck
         {
             ausgabe.Text = "";
         }
+
+        // this program was written by Noel Seifert
+        //visit my webside: www.noel.familie-seifert.com
     }
 }
